@@ -59,7 +59,17 @@
         "stacktrace": "cpp",
         "regex": "cpp",
         "valarray": "cpp",
-        "bitset": "cpp"
+        "bitset": "cpp",
+        "csetjmp": "cpp",
+        "any": "cpp",
+        "coroutine": "cpp",
+        "csignal": "cpp",
+        "expected": "cpp",
+        "ratio": "cpp",
+        "source_location": "cpp",
+        "scoped_allocator": "cpp",
+        "typeindex": "cpp",
+        "variant": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
