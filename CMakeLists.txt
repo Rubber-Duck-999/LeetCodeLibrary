@@ -12,6 +12,7 @@ include_directories(${INCL_DIR})
 
 set (SOURCE
     ${SRC_DIR}/TwoSum.cc
+    ${SRC_DIR}/ContainsDuplicate.cc
 )
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -O3 -Wall -Werror -fsanitize=address -static-libasan -g")

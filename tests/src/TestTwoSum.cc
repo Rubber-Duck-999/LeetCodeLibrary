@@ -52,9 +52,3 @@ TEST(TwoSumTest, Duplicates) {
     // 5 + 5
     EXPECT_EQ(two_sum.Calculate(nums, 10), (std::vector<int>{1, 2}));
 }
-
-int main(int argc, char **argv)
-{
-    testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-}

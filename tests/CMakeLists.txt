@@ -7,12 +7,15 @@ set (MAIN_SRC_DIR ../src)
 include_directories (${PROJECT_SOURCE_DIR}/${INCL_DIR})
 # Include all project source files here
 set (MAIN_SOURCE
-    ${MAIN_SRC_DIR}/TwoSum.cc)
+    ${MAIN_SRC_DIR}/TwoSum.cc
+    ${MAIN_SRC_DIR}/ContainsDuplicate.cc
+)
 
 set (TESTS_DIR src)
 
 set(PROJ_UT_SRC
     ${TESTS_DIR}/TestTwoSum.cc
+    ${TESTS_DIR}/TestContainsDuplicate.cc
 )
 
 include_directories (${PROJECT_SOURCE_DIR}/${INCL_DIR})
