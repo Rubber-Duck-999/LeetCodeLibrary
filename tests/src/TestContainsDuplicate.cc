@@ -13,8 +13,4 @@ TEST(ContainsDuplicateTest, BasicCases) {
     EXPECT_TRUE(contains_duplicate.Check(nums2));
 }
 
-int main(int argc, char **argv)
-{
-    testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-}
+
