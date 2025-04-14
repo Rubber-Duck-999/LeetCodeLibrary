@@ -2,24 +2,24 @@ cmake_minimum_required(VERSION 3.14)
 
 project(libLeetCodeLibrary VERSION 1.0 LANGUAGES CXX)
 
-# Source files folder
-set (SRC_DIR src)
+# Source and header directories
+set(SRC_DIR src)
+set(INCL_DIR include)
 
-# Header files folder
-set (INCL_DIR include)
-
+# Include headers
 include_directories(${INCL_DIR})
 
-set (SOURCE
-    ${SRC_DIR}/TwoSum.cc
-    ${SRC_DIR}/ContainsDuplicate.cc
-)
+# Automatically find all .cc files in src/
+file(GLOB SOURCE "${SRC_DIR}/*.cc")
 
+# Compiler flags
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -O3 -Wall -Werror -fsanitize=address -static-libasan -g")
 
+# Static library
 add_library(libLeetCodeLibrary STATIC ${SOURCE})
 
-# Specify the include directories for the library
-target_include_directories(libLeetCodeLibrary PUBLIC include)
+# Header directory for consumers
+target_include_directories(libLeetCodeLibrary PUBLIC ${INCL_DIR})
 
+# Add tests subdirectory
 add_subdirectory(tests)

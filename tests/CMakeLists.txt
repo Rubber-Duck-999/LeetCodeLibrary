@@ -1,30 +1,28 @@
 cmake_minimum_required(VERSION 3.22)
-set (PROJECT_TEST_NAME ${PROJECT_NAME}-Test)
+
+# Name of the test binary
+set(PROJECT_TEST_NAME ${PROJECT_NAME}-Test)
 
 enable_testing()
 
-set (MAIN_SRC_DIR ../src)
-include_directories (${PROJECT_SOURCE_DIR}/${INCL_DIR})
-# Include all project source files here
-set (MAIN_SOURCE
-    ${MAIN_SRC_DIR}/TwoSum.cc
-    ${MAIN_SRC_DIR}/ContainsDuplicate.cc
+# Include dirs
+include_directories(${PROJECT_SOURCE_DIR}/${INCL_DIR})
+
+# Gather test source files
+file(GLOB TEST_SOURCES "src/*.cc")
+
+# Test executable (includes test files + main source)
+add_executable(${PROJECT_TEST_NAME}
+    ${TEST_SOURCES}
 )
 
-set (TESTS_DIR src)
-
-set(PROJ_UT_SRC
-    ${TESTS_DIR}/TestTwoSum.cc
-    ${TESTS_DIR}/TestContainsDuplicate.cc
-)
-
-include_directories (${PROJECT_SOURCE_DIR}/${INCL_DIR})
-
-add_executable (${PROJECT_TEST_NAME} ${PROJ_UT_SRC} ${MAIN_SOURCE})
-
-link_directories(/usr/local/lib)
-
-# Link libraries
+# Link with main library
 target_link_libraries(${PROJECT_TEST_NAME}
-                      gtest)
+    libLeetCodeLibrary
+    gtest
+    gtest_main
+)
 
+# Optional: automatically discover tests
+include(GoogleTest)
+gtest_discover_tests(${PROJECT_TEST_NAME})
