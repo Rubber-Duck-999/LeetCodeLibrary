@@ -19,9 +19,7 @@ bool ValidAnagram::Calculate(std::string s, std::string p) {
     }
 
     for (auto& pair : map) {
-        if (pair.second != 0) {
-            return false;
-        }
+        if (pair.second != 0) return false;
     }
     return true;
 }

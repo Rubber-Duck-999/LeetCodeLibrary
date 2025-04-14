@@ -22,7 +22,7 @@ No idea what it could be used for but actually a library full of solutions
 
 - Longest Substring Without Repeating Characters – Medium
 
-- Implement strStr() – Easy
+- Needle in a Haystack – Easy
 
 ### Day 3: Linked Lists
 #### Techniques: Pointers, Dummy Nodes, Floyd’s Cycle Detection
