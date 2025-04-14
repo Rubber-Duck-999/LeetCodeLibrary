@@ -60,4 +60,29 @@ No idea what it could be used for but actually a library full of solutions
 
 - Daily Temperatures – Medium
 
+### Day 7: Dynamic Programming – Fundamentals
+Techniques: Bottom-Up, Tabulation, Memoization
 
+- Climbing Stairs – Easy
+
+- Maximum Subarray – Easy
+
+- House Robber – Medium
+
+### Day 8: Backtracking + Combinatorics
+Techniques: Recursion Trees, Base/Choice Patterns
+
+- Subsets – Medium
+
+- Permutations – Medium
+
+- Combination Sum – Medium
+
+### Day 9: Expression Parsing + Recursion – Hard
+Techniques: Stack, DFS, Recursion with Memory
+
+- Basic Calculator – Hard
+
+- Expression Add Operators – Hard
+
+- Basic Calculator II – Medium
